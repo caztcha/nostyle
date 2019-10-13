@@ -1,5 +1,5 @@
 function SelectAll(container, checkboxes) {
-	this.button = $('<button type="button" class="selectAll-button">Select all</button>');
+	this.button = $('<button type="button" class="selectAll-button">すべてを選択</button>');
 	this.button.on('click', $.proxy(this, 'onButtonClick'))
 	container.append(this.button);
 	this.checkboxes = checkboxes;
@@ -9,10 +9,10 @@ function SelectAll(container, checkboxes) {
 SelectAll.prototype.onButtonClick = function(e) {
 	if(this.checked) {
 		this.uncheckAll();
-		this.button.text('Select all');
+		this.button.text('すべてを選択');
 	} else {
 		this.checkAll();
-		this.button.text('Deselect all');
+		this.button.text('すべての選択を解除');
 	}
 };
 

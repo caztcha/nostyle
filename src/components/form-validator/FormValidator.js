@@ -48,7 +48,7 @@ FormValidator.prototype.showSummary = function () {
 };
 
 FormValidator.prototype.getSummaryHtml = function() {
-  var html = '<h2 id="errorSummary-heading">There\'s a problem</h2>';
+  var html = '<h2 id="errorSummary-heading">問題があります</h2>';
   html += '<ul>';
   for (var i = 0, j = this.errors.length; i < j; i++) {
     var error = this.errors[i];

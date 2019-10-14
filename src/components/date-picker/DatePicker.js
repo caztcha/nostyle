@@ -440,7 +440,8 @@ if(!supportsDateInput()) {
 	};
 
 	DatePicker.prototype.updateCalendarHtml = function(year, month) {
-		this.calendar.find('[role=status]').html(this.monthNames[month] + ' ' + year);
+		// this.calendar.find('[role=status]').html(year + '年 ' + this.monthNames[month] + ' ' + year);
+		this.calendar.find('[role=status]').html(year + '年 ' + this.monthNames[month]);
 		this.calendar.find("tbody").html(this.getCalendarTableRows(month, year));
 	};
 

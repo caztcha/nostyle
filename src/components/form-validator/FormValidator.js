@@ -37,7 +37,7 @@ FormValidator.prototype.resetTitle = function() {
 };
 
 FormValidator.prototype.updateTitle = function() {
-  document.title = "(" + this.errors.length + " つのエラー) - " + document.title;
+  document.title = "(" + this.errors.length + "件のエラー) - " + document.title;
 };
 
 FormValidator.prototype.showSummary = function () {

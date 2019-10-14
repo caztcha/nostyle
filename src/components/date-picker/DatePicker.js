@@ -174,7 +174,8 @@ if(!supportsDateInput()) {
 	};
 
 	DatePicker.prototype.getCellHtml = function(date, options) {
-		var label = date.getDate() + ' ' + this.monthNames[date.getMonth()] + ', ' + date.getFullYear();
+		// var label = date.getDate() + ' ' + this.monthNames[date.getMonth()] + ', ' + date.getFullYear();
+		var label = date.getFullYear() + '年 ' + this.monthNames[date.getMonth()] + date.getDate() + '日';
 		var shortLabel = ' ' + this.monthNames[date.getMonth()] + ', ' + date.getFullYear();
 
 		var tdClass = '';

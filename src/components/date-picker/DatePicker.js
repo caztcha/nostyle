@@ -28,7 +28,7 @@ if(!supportsDateInput()) {
 
 	DatePicker.prototype.setupMonthNames = function() {
 		this.monthNames = [
-			'January',
+			'1月',
 			'February',
 			'March',
 			'April',
@@ -79,7 +79,7 @@ if(!supportsDateInput()) {
 		html += 	'<table role="grid">';
 		html += 		'<thead>';
 		html += 			'<tr>';
-		html += 				'<th aria-label="Sunday">Su</th>';
+		html += 				'<th aria-label="日曜日">日</th>';
 		html += 				'<th aria-label="Monday">Mo</th>';
 		html += 				'<th aria-label="Tuesday">Tu</th>';
 		html += 				'<th aria-label="Wednesday">We</th>';

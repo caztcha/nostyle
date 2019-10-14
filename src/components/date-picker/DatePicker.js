@@ -234,7 +234,7 @@ if(!supportsDateInput()) {
 	};
 
 	DatePicker.prototype.createToggleButton = function() {
-		this.toggleButton = $('<button type="button" aria-haspopup="true">Choose</button>');
+		this.toggleButton = $('<button type="button" aria-haspopup="true">日付を選択</button>');
 		this.wrapper.append(this.toggleButton);
 		this.toggleButton.on('click', $.proxy(this, 'onToggleButtonClick'));
 	};

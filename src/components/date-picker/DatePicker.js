@@ -29,17 +29,17 @@ if(!supportsDateInput()) {
 	DatePicker.prototype.setupMonthNames = function() {
 		this.monthNames = [
 			'1月',
-			'February',
-			'March',
-			'April',
-			'May',
-			'June',
-			'July',
-			'August',
-			'September',
-			'October',
-			'November',
-			'December'
+			'2月',
+			'3月',
+			'4月',
+			'5月',
+			'6月',
+			'7月',
+			'8月',
+			'9月',
+			'10月',
+			'11月',
+			'12月'
 		];
 	};
 
@@ -80,12 +80,12 @@ if(!supportsDateInput()) {
 		html += 		'<thead>';
 		html += 			'<tr>';
 		html += 				'<th aria-label="日曜日">日</th>';
-		html += 				'<th aria-label="Monday">Mo</th>';
-		html += 				'<th aria-label="Tuesday">Tu</th>';
-		html += 				'<th aria-label="Wednesday">We</th>';
-		html += 				'<th aria-label="Thursday">Th</th>';
-		html += 				'<th aria-label="Friday">Fr</th>';
-		html += 				'<th aria-label="Saturday">Sa</th>';
+		html += 				'<th aria-label="月曜日">月</th>';
+		html += 				'<th aria-label="火曜日">火</th>';
+		html += 				'<th aria-label="水曜日">水</th>';
+		html += 				'<th aria-label="木曜日">木</th>';
+		html += 				'<th aria-label="金曜日">金</th>';
+		html += 				'<th aria-label="土曜日">土</th>';
 		html += 			'</tr>';
 		html += 		'</thead>';
 		html += 		'<tbody>';

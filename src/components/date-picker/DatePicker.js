@@ -68,13 +68,13 @@ if(!supportsDateInput()) {
 	};
 
 	DatePicker.prototype.getCalendarHtml = function(year, month) {
-		var html = '<div class="'+this.calendarClass+'-calendar" aria-label="date picker" role="group">';
+		var html = '<div class="'+this.calendarClass+'-calendar" aria-label="カレンダー" role="group">';
 		html +=		'<div class="'+this.calendarClass+'-actions">';
-		html +=			'<button type="button" aria-label="previous month"><svg focusable="false" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17 17" width="1em" height="1em"><g></g><path d="M5.207 8.471l7.146 7.147-0.707 0.707-7.853-7.854 7.854-7.853 0.707 0.707-7.147 7.146z"></path></svg></button>';
+		html +=			'<button type="button" aria-label="前の月"><svg focusable="false" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17 17" width="1em" height="1em"><g></g><path d="M5.207 8.471l7.146 7.147-0.707 0.707-7.853-7.854 7.854-7.853 0.707 0.707-7.147 7.146z"></path></svg></button>';
 		html += 		'<div role="status" aria-live="polite">';
 		html += 			year + "年 " + this.monthNames[month];
 		html += 		'</div>';
-		html +=			'<button type="button" aria-label="next month"><svg focusable="false" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17 17" width="1em" height="1em"><g></g><path d="M13.207 8.472l-7.854 7.854-0.707-0.707 7.146-7.146-7.146-7.148 0.707-0.707 7.854 7.854z"></path></svg></button>';
+		html +=			'<button type="button" aria-label="次の月"><svg focusable="false" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17 17" width="1em" height="1em"><g></g><path d="M13.207 8.472l-7.854 7.854-0.707-0.707 7.146-7.146-7.146-7.148 0.707-0.707 7.854 7.854z"></path></svg></button>';
 		html +=		'</div>';
 		html += 	'<table role="grid">';
 		html += 		'<thead>';
@@ -440,7 +440,6 @@ if(!supportsDateInput()) {
 	};
 
 	DatePicker.prototype.updateCalendarHtml = function(year, month) {
-		// this.calendar.find('[role=status]').html(year + '年 ' + this.monthNames[month] + ' ' + year);
 		this.calendar.find('[role=status]').html(year + '年 ' + this.monthNames[month]);
 		this.calendar.find("tbody").html(this.getCalendarTableRows(month, year));
 	};

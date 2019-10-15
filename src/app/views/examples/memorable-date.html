@@ -8,20 +8,20 @@
 {% block mainContent %}
 
 	{{memorableDate({
-		legend: 'Date of birth',
-		day: {
-			name: 'day',
-			label: "Day"
+		legend: '生年月日',
+		year: {
+			name: 'year',
+			label: "年"
 		},
 		month: {
 			name: 'month',
-			label: "Month"
+			label: "月"
 		},
-		year: {
-			name: 'year',
-			label: "Year"
+		day: {
+			name: 'day',
+			label: "日"
 		},
-		hint: 'DD MM YYYY'
+		hint: 'YYYY (年 : 4桁) / MM (月 : 2桁) / DD (日 : 2桁)'
 	})}}
 
 {% endblock mainContent %}

@@ -10,7 +10,7 @@ function CharacterCountdown(field, options) {
 CharacterCountdown.prototype.setOptions = function(options) {
 	var defaults = {
 		maxLength: 100,
-		message: 'You have %count% characters remaining.'
+		message: '残り%count%文字'
 	};
 	this.options = $.extend(defaults, options);
 };

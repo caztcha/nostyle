@@ -10,30 +10,30 @@
 
 {% block mainContent %}
 
-	{{h1({text: 'Payment'})}}
+	{{h1({text: 'お支払い'})}}
 
 	<form novalidate>
 		{{textBox({
 			name: 'cardnumber',
-			label: 'Card number',
-			hint: 'The long number on the front of your card'
+			label: 'カード番号',
+			hint: 'カード表面にある14桁から16桁の番号'
 		})}}
 		{{textBox({
 			name: 'expiry',
-			label: 'Expiry date',
-			hint: 'MMYY'
+			label: '有効期限',
+			hint: 'MMYY (月2桁と年2桁を続けて入力)'
 		})}}
 		{{textBox({
 			name: 'cvc',
-			label: 'Card',
-			hint: 'The last 3 numbers on the back of your card'
+			label: 'セキュリティコード',
+			hint: 'カード裏面にある下3桁の番号'
 		})}}
 
 		{{checkboxes({
 			name: 'same',
-			legend: 'Is your billing address the same as delivery?',
+			legend: '請求先住所',
 			choices: [{
-				label: 'Yes, my billing address is the same',
+				label: '請求先の住所は配送先と同じ',
 				id: 'same',
 				checked: true
 			}]
@@ -55,7 +55,7 @@
 		</div>
 
 		{{primaryButton({
-			text: 'Continue',
+			text: '続ける',
 			name: 'pay'
 		})}}
 	</form>

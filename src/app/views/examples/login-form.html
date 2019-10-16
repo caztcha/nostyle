@@ -7,28 +7,28 @@
 		 	method: function(field) {
 		    	return field.value.trim().length > 0;
 			},
-			message: 'Enter your email address.'
+			message: 'メールアドレスを入力してください。'
 		},{
 			method: function(field) {
 		    	return (field.value.indexOf('@') > -1);
 		  	},
-			message: 'You need to enter the ‘at’ symbol in the email address.'
+			message: 'メールアドレスには@マークが必要です。'
 		}]);
 		validator.addValidator('password', [{
 			method: function(field) {
 		    	return field.value.trim().length > 0;
 			},
-			message: 'Enter your password.'
+			message: 'パスワードを入力してください。'
 		}, {
 			method: function(field) {
 		    	return field.value.length > 8;
 			},
-			message: 'Your password must contain at least 8 characters.'
+			message: 'パスワードには8文字以上が必要です。'
 		}, {
 			method: function(field) {
 		    return /\d/.test(field.value);
 			},
-			message: 'Your password must contain at least one number.'
+			message: 'パスワードには1文字以上の数字が必要です。'
 		}]);
 
 		new PasswordRevealer(document.getElementById('password'));
@@ -43,8 +43,8 @@
 	{{h1({ text: 'Log in' })}}
 	<div class="prose">
 		<ul>
-				<li>Not signed up? <a href="/examples/registration-form">Register</a></li>
-				<li>Forgot password? <a href="#">Reset password</a></li>
+				<li>アカウントをお持ちでない方 : <a href="/examples/registration-form">登録</a></li>
+				<li>パスワードをお忘れの方 : <a href="#">パスワードのリセット</a></li>
 			</ul>
 	</div>
 
@@ -53,19 +53,19 @@
 	<form novalidate>
 		{{textBox({
 			name: 'email',
-			label: 'Email address',
+			label: 'メールアドレス',
 			attributes: ' autocapitalize="none" autocorrect="off" spellcheck="false"
 		'})}}
 
 		{{textBox({
 			name: 'password',
-			label: 'Password',
+			label: '・パスワード',
 			type: 'password',
-			hint: 'Must contain 8+ characters with at least 1 number.'
+			hint: '数字を1文字以上含めて、8文字以上で入力してください。'
 		})}}
 
 		{{primaryButton({
-			text: 'Log in',
+			text: 'ログイン',
 			name: 'login'
 		})}}
 	</form>

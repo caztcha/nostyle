@@ -19,8 +19,8 @@ Stepper.prototype.createStatusBox = function() {
 
 Stepper.prototype.setOptions = function(options) {
 	var defaults = {
-		removeLabel: 'Remove',
-		addLabel: 'Add'
+		removeLabel: '減らす',
+		addLabel: '増やす'
 	};
 	this.options = $.extend(defaults, options);
 };

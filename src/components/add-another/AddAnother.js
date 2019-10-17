@@ -47,7 +47,7 @@ AddAnother.prototype.updateAttributes = function(index, item) {
 };
 
 AddAnother.prototype.createRemoveButton = function(item) {
-  item.append('<button type="button" class="secondaryButton addAnother-removeButton">Remove</button>');
+  item.append('<button type="button" class="secondaryButton addAnother-removeButton">削除</button>');
 };
 
 AddAnother.prototype.resetItem = function(item) {

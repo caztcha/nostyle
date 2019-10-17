@@ -24,7 +24,7 @@ if(dragAndDropSupported() && formDataSupported() && fileApiSupported()) {
   };
 
   Dropzone.prototype.setupDropzone = function() {
-    this.dropzone.find('label').html('Upload file');
+    this.dropzone.find('label').html('ファイルをアップロード');
     this.dropzone.on('dragover', $.proxy(this, 'onDragOver'));
     this.dropzone.on('dragleave', $.proxy(this, 'onDragLeave'));
     this.dropzone.on('drop', $.proxy(this, 'onDrop'));

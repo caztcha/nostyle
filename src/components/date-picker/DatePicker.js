@@ -208,7 +208,7 @@ if(!supportsDateInput()) {
 		html += '>';
 
 		if(options.today) {
-			html += '<span class="datepicker-today">Today</span>';
+			html += '<span class="datepicker-today">今日</span>';
 		}
 
 		html += '<span aria-hidden="true">';

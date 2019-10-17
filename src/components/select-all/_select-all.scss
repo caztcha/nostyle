@@ -1,4 +1,5 @@
 .selectAll-button {
 	@include secondaryButton;
 	border-radius: 0;
+	font-size:0.8em; /*日本語ローカライズ時の表示崩れ調整*/
 }

@@ -61,7 +61,7 @@ if(dragAndDropSupported() && formDataSupported() && fileApiSupported()) {
   	e.preventDefault();
   	this.dropzone.removeClass('dropzone-dragover');
     $('.files').removeClass('hidden');
-    this.status.html('Uploading files, please wait.');
+    this.status.html('ファイルをアップロードしています。お待ちください。');
   	this.uploadFiles(e.originalEvent.dataTransfer.files);
   };
 
@@ -73,7 +73,7 @@ if(dragAndDropSupported() && formDataSupported() && fileApiSupported()) {
 
   Dropzone.prototype.onFileChange = function(e) {
     $('.files').removeClass('hidden');
-    this.status.html('Uploading files, please wait.');
+    this.status.html('ファイルをアップロードしています。お待ちください。');
     this.uploadFiles(e.currentTarget.files);
   };
 
@@ -87,15 +87,15 @@ if(dragAndDropSupported() && formDataSupported() && fileApiSupported()) {
 
   Dropzone.prototype.getSuccessHtml = function(file) {
     var html = '<a class="file-name" href="/'+file.path+'">'+file.originalname+'</a>';
-    html += '<span class="success"><svg width="1.5em" height="1.5em"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#tick"></use></svg>File uploaded</span>';
-    html += '<button type="button" class="file-remove">Remove</button>';
+    html += '<span class="success"><svg width="1.5em" height="1.5em"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#tick"></use></svg>アップロードされました</span>';
+    html += '<button type="button" class="file-remove">削除</button>';
     return html;
   };
 
   Dropzone.prototype.getErrorHtml = function(error) {
     var html = '<span class="file-name">'+error.file.originalname+'</span>';
     html += '<span class="error"><svg width="1.5em" height="1.5em"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#warning-icon"></use></svg>'+error.text+'</span>';
-    html += '<button type="button" class="file-remove">Remove</button>';
+    html += '<button type="button" class="file-remove">削除</button>';
     return html;
   };
 
@@ -125,7 +125,7 @@ if(dragAndDropSupported() && formDataSupported() && fileApiSupported()) {
           this.status.html(response.error);
         } else {
           li.html(this.getSuccessHtml(response.file));
-          this.status.html(response.file.originalname + ' has been uploaded.');
+          this.status.html(response.file.originalname + ' がアップロードされました。');
         }
       }, this),
       xhr: function() {

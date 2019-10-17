@@ -61,9 +61,9 @@ router.post('/ajax-upload', function( req, res ){
   uploadAjax(req, res, function(error) {
     if(error) {
       if(error.code == 'FILE_TYPE') {
-        error.text = error.file.originalname + ' is in the wrong format. Upload PNG files only.';
+        error.text = error.file.originalname + ' は PNG ファイルではないのでアップロードできません。';
       } else if(error.code == 'LIMIT_FILE_SIZE') {
-        error.text = error.file.originalname + ' is too big. It must be less than 2MB.';
+        error.text = error.file.originalname + ' のサイズが大きすぎます。2MB未満でなくてはいけません。';
       }
       res.json({ error });
     } else {

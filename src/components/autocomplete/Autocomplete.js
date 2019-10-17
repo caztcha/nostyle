@@ -351,7 +351,7 @@ Autocomplete.prototype.updateStatus = function(resultCount) {
 	if(resultCount === 0) {
 		this.status.text('No results.');
 	} else {
-		this.status.text(resultCount + ' results available.');
+		this.status.text(resultCount + ' の到着地候補');
 	}
 };
 

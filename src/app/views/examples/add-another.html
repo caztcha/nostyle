@@ -11,17 +11,17 @@
 
 	<form method="post" action="/examples/add-another/">
 		<div class="addAnother">
-			<h1 class="h1 addAnother-heading" tabindex="-1">Expenses</h1>
+			<h1 class="h1 addAnother-heading" tabindex="-1">経費の申請</h1>
 			<div class="addAnother-item">
 				{{textBox({
-					label: 'Description',
+					label: '説明',
 					name: 'items[0][description]',
 					id: 'items[0][description]',
 					attributes: 'data-name="items[%index%][description]" data-id="items[%index%][description]"'
 				})}}
 
 				{{textBox({
-					label: 'Amount (£)',
+					label: '金額 (￥)',
 					name: 'items[0][amount]',
 					type: 'number',
 					id: 'items[0][amount]',
@@ -44,14 +44,14 @@
 				})}} -->
 			</div>
 			{{secondaryButton({
-				text: 'Add another',
+				text: 'さらに追加',
 				name: 'add',
 				class: 'addAnother-addButton'
 			})}}
 		</div>
 
 		{{primaryButton({
-			text: 'Submit expenses',
+			text: '経費を送信',
 			name: 'submitExpenses'
 		})}}
 	</form>

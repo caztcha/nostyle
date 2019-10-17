@@ -15,29 +15,29 @@
 {% block mainContent %}
 
 
-		<h1 class="filter-heading">Wallets</h1>
+		<h1 class="filter-heading">財布</h1>
 		<div class="filter-marker"></div>
 		<div class="filter" aria-labelledby="filter-heading">
 
 			<div class="filter-wrapper">
 
-				<h2 id="filter-heading">Filter</h2>
+				<h2 id="filter-heading">絞り込み</h2>
 
 				<form role="form" method="get" action="/examples/filter-form">
 
 					{{checkboxes({
 						name: 'color',
-						legend: 'Color',
+						legend: '色',
 						choices: [{
-							label: 'Red',
+							label: '赤',
 							id: 'color',
 							value: 'red'
 						}, {
-							label: 'Blue',
+							label: '青',
 							id: 'color1',
 							value: 'blue'
 						},  {
-							label: 'Green',
+							label: '緑',
 							id: 'color2',
 							value: 'green'
 						}]
@@ -45,21 +45,21 @@
 
 					{{radioButtons({
 						name: 'rating',
-						legend: 'Rating',
+						legend: '評価',
 						choices: [{
-							label: '4 stars and up',
+							label: '4つ星以上',
 							id: 'popularity0',
 							value: '4'
 						},  {
-							label: '3 stars and up',
+							label: '3つ星以上',
 							id: 'popularity1',
 							value: '3'
 						}, {
-							label: '2 stars and up',
+							label: '2つ星以上',
 							id: 'popularity2',
 							value: '2'
 						}, {
-							label: '1 star and up',
+							label: '1つ星以上',
 							id: 'popularity3',
 							value: '1'
 						}]
@@ -67,21 +67,21 @@
 
 					{{radioButtons({
 						name: 'another',
-						legend: 'Something else',
+						legend: '(別の絞り込み項目)',
 						choices: [{
-							label: 'Value',
+							label: '(項目1)',
 							id: 'value0',
 							value: '4'
 						},  {
-							label: 'Value',
+							label: '(項目2)',
 							id: 'value1',
 							value: '3'
 						}, {
-							label: 'Value',
+							label: '(項目3)',
 							id: 'value2',
 							value: '2'
 						}, {
-							label: 'Value',
+							label: '(項目4)',
 							id: 'value3',
 							value: '1'
 						}]
@@ -89,24 +89,24 @@
 
 					{{checkboxes({
 						name: 'options',
-						legend: 'More options',
+						legend: '(さらに別の絞り込み項目)',
 						choices: [{
-							label: 'Option',
+							label: '(オプション1)',
 							id: 'options',
 							value: '1'
 						}, {
-							label: 'Option',
+							label: '(オプション2)',
 							id: 'options1',
 							value: '2'
 						},  {
-							label: 'Option',
+							label: '(オプション3)',
 							id: 'options2',
 							value: '3'
 						}]
 					})}}
 
 					{{primaryButton({
-						text: 'Apply filters',
+						text: '絞り込む',
 						name: 'apply'
 					})}}
 				</form>

@@ -3,18 +3,18 @@
 
 {% block body %}
 	<header class="searchHeader">
-		<div>Header</div>
+		<div>(ロゴ)</div>
 	</header>
 	<div role="search">
 		<form class="searchForm">
 			{{textBox({
 				name: 'search',
-				label: 'Search products',
+				label: '製品検索',
 				type: 'search',
-				hint: 'For example, “black wallet”'
+				hint: '例 : 黒い財布'
 			})}}
 			{{primaryButton({
-				text: 'Search',
+				text: '検索',
 				name: 'search'
 			})}}
 		</form>

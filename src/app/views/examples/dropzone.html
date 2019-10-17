@@ -17,10 +17,10 @@
 	  </symbol>
 	</svg>
 
-	{{h1({text: 'Upload files'})}}
+	{{h1({text: 'ファイルのアップロード'})}}
 
 	<div class="prose">
-		<p>You can only upload PNG files.</p>
+		<p>PNG ファイルのみアップロードできます。</p>
 	</div>
 
 	<div class="files {% if not files.length %}hidden{% endif%}">
@@ -31,7 +31,7 @@
 					<li>
 						<a href="{{file.path}}">{{file.originalname}}</a>
 						<progress value="100" max="100">100%</progress>
-						<button class="secondaryButton">Delete</button>
+						<button class="secondaryButton">削除</button>
 					</li>
 				{% endfor %}
 			{% endif %}
@@ -46,12 +46,12 @@
 				multiple: true
 			})}}
 			{{secondaryButton({
-				text: 'Upload file',
+				text: 'ファイルをアップロード',
 				name: 'upload'
 			})}}
 		</div>
 		{{primaryButton({
-			text: 'Continue',
+			text: '続ける',
 			name: 'continue'
 		})}}
 	</form>

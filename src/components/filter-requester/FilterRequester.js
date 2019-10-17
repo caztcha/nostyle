@@ -39,7 +39,7 @@ FilterRequester.prototype.onInputChange = function(e) {
 };
 
 FilterRequester.prototype.requestResults = function(query) {
-	this.updateStatusBox('Loading products');
+	this.updateStatusBox('読み込み中...');
 	this.showLoadingIndicator();
 	$.ajax({
 		url: this.url,
@@ -51,7 +51,7 @@ FilterRequester.prototype.requestResults = function(query) {
 
 FilterRequester.prototype.onRequestSuccess = function(query, response) {
 	history.pushState(response, null, this.url+'?'+query);
-	this.updateStatusBox('Products loaded');
+	this.updateStatusBox('読み込み完了');
 	// this.hideLoadingIndicator();
 	this.renderUpdates(response);
 };

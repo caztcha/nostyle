@@ -6,8 +6,8 @@ function AddAnother(container) {
   // Replace <input type=submit> with <button type=button>
   // because older versions of IE won't allow changing type property
   // via script. Shame.
-  this.container.find('.addAnother-removeButton').replaceWith('<button type="button" class="secondaryButton addAnother-removeButton">Remove</button>');
-  this.container.find('.addAnother-addButton').replaceWith('<button type="button" class="secondaryButton addAnother-addButton">Add another</button>');
+  this.container.find('.addAnother-removeButton').replaceWith('<button type="button" class="secondaryButton addAnother-removeButton">削除</button>');
+  this.container.find('.addAnother-addButton').replaceWith('<button type="button" class="secondaryButton addAnother-addButton">さらに追加</button>');
 }
 
 AddAnother.prototype.onAddButtonClick = function(e) {

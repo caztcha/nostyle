@@ -28,7 +28,7 @@ FormValidator.escapeHtml = function(string) {
 FormValidator.prototype.onErrorClick = function(e) {
   e.preventDefault();
   var href = e.target.href;
-  const id = href.substring(href.indexOf('#') + 1);
+  var id = href.substring(href.indexOf("#"), href.length);
   $(id).focus();
 };
 

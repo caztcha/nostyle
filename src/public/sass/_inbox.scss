@@ -27,9 +27,11 @@
 	background-color: #ddd;
 }
 
+/* 当該 label 要素には別途 class="visually-hidden" を適用するので、この記述は不要。
 .inbox li label {
 	display: none;
 }
+*/
 
 .inbox li input {
 	float: left;
